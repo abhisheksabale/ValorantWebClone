@@ -1,0 +1,34 @@
+body {
+    background-color: $color-bg;
+}
+
+.card {
+    padding: $my-padding;
+    margin: $my-margin;
+
+    .card-title {
+        padding: $my-padding;
+        @include font-head();
+    }
+
+    .card-text {
+        @include font-content();
+    }
+
+    span {
+        background-color: $color-bg;
+        color: white;
+        float: right;
+
+        &:hover {
+            color: lighten($color: grey, $amount: 0);
+        }
+    }
+
+    button {
+        background-color: $color-bg;
+        color: white;
+        float: left;
+    }
+}
+

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Valorant</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <nav class="navbar navbar-collapse-xs navbar-expand-md">
+	    	
+	    	<div class="container">
+		    	<a class="navbar-brand" href="index.html">
+                    <img src="images/logo.jpg">
+                </a>
+		      	
+		      	<button class="navbar-toggler" data-toggle="collapse" data-target="#main-menu">
+		        	<span class="navbar-toggler-icon"></span>
+		      	</button>
+
+	      		<div class="collapse navbar-collapse" id="main-menu">
+	        		<ul class="navbar-nav ml-auto">
+			        	<li class="nav-item active">
+			            	<a class="nav-link" href="index.html">Home</a>
+			          	</li>
+
+						<li class="nav-item">
+	            		    <a class="nav-link" href="#">About</a>
+	          			</li>
+
+	          			<li class="nav-item">
+	            			<a class="nav-link" href="#" data-toggle="modal" data-target="#feedback-modal" >Feedback</a>
+	          			</li>
+	        		</ul>
+	      		</div>
+      		</div>
+    	</nav>
+
+        <br>
+        <div class="place-list">
+	    	<div class="container">
+	    		<div class="row">
+					<div class="col-sm-12 col-md-6 col-lg-4">
+						<div class="card">
+							<img class="card-img-top" src="images/breach.jpg">
+							<div class="card-block">
+								<h4 class="card-title">Breach</h4>
+								<p class="card-text">Breach, the bionic Swede, fires powerful, targeted kinetic blasts to aggressively clear a path through enemy ground. The damage and disruption he inflicts ensures no fight is ever fair</p>
+								<button id="follow-button" class="btn" onclick="follow()" data-toggle="popover" value="follow">Follow</button>
+								<span class="specific-tip btn" title="Q - Flashpoint<br>E - Fault Line<br>C- Aftershock<br>X - Rolling Thunder">Breach abilities</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-4">
+						<div class="card">
+							<img class="card-img-top" src="images/sova.jpg">
+							<div class="card-block">
+								<h4 class="card-title">Sova</h4>
+								<p class="card-text">Born from the eternal winter of Russia's tundra, Sova tracks, finds, and eliminates enemies with ruthless efficiency and precision. His custom bow and incredible scouting abilities ensure that even if you run, you cannot hide.</p>
+								<span class="specific-tip btn" title="Q - Shock Bolt<br>E - Recon Bolt<br>C- Owl Drone<br>X - Hunter's Fury">Sova abilities</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-4">
+						<div class="card">
+							<img class="card-img-top" src="images/cypher.jpg">
+							<div class="card-block">
+								<h4 class="card-title">Cypher</h4>
+								<p class="card-text">The Moroccan information broker, Cypher is a one-man surveillance network who keeps tabs on the enemy's every move. No secret is safe. No maneuver goes unseen. Cypher is always watching.</p>
+								<span class="specific-tip btn" title="Q - Cyber Cage<br>E - Spycam<br>C- Trap Wire<br>X - Neural Theft">Cyper abilities</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-4">
+						<div class="card">
+							<img class="card-img-top" src="images/phoenix.jpg">
+							<div class="card-block">
+								<h4 class="card-title">Phoenix</h4>
+								<p class="card-text">Hailing from the U.K., Phoenix's star power shines through in his fighting style, igniting the battlefield with flash and flare. Whether he's got backup or not, he'll rush into a fight on his own terms.</p>
+								<span class="specific-tip btn" title="Q - Curve Ball<br>E - Hot Hands<br>C- Blaze<br>X - Run it Back">Phoenix abilities</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-4">
+						<div class="card">
+							<img class="card-img-top" src="images/raze.jpg">
+							<div class="card-block">
+								<h4 class="card-title">Raze</h4>
+								<p class="card-text">Raze explodes out of Brazil with her big personality and big guns. With her blunt-force-trauma playstyle, she excels at flushing entrenched enemies and clearing tight spaces with a generous dose of “boom.”</p>
+								<span class="specific-tip btn" title="Q - Blast Pack<br>E - Paint Shells<br>C- Boom Bot<br>X - Showstopper">Raze abilities</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-4">
+						<div class="card">
+							<img class="card-img-top" src="images/sage.jpg">
+							<div class="card-block">
+								<h4 class="card-title">Sage</h4>
+								<p class="card-text">The stronghold of China, Sage creates safety for herself and her team wherever she goes. Able to revive fallen friends and stave off aggressive pushes, she provides a calm center to a hellish fight.</p>
+								<span class="specific-tip btn" title="Q - Slow Orb<br>E - Healing Orb<br>C- Barrier Orb<br>X - Resurrection">Sage abilities</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	    </div>
+
+		<div class="modal fade" id="feedback-modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body">
+						<div class="form-box">
+							 <h3>Feedback form</h3>
+							 <form method="POST" action="#">
+								<div class="form-group">
+									<label class="form-control-label">Email</label>
+									<input type="email" class="form-control" required>
+								</div>
+								<div class="form-group">
+									<label class="form-control-label">Message</label>
+									<input type="text" class="form-control" required>
+								</div>
+								<div class="form-group">
+									<input type="submit" value="Submit" class="btn btn-success">
+									<input type="reset" value="Cancel" class="btn btn-danger" data-dismiss="modal">
+								</div>
+							 </form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+        <footer class="bg-light text-center text-lg-start">
+            <div class="text-center p-3">
+              © 2021 Copyright:
+              <a href="index.html">Valorant</a>
+            </div>
+        </footer>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="js/tether.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+		<script src="js/main.js"></script>
+		<script>
+			function follow(){
+				var elem = document.getElementById("follow-button");
+    			if (elem.value=="follow") {
+					elem.value = "unfollow";
+					elem.innerHTML = "Unfollow";
+				}
+    			else { 
+					elem.value = "follow";
+					elem.innerHTML = "Follow"
+				}
+
+			}
+		</script>
+    </body>
+</html>

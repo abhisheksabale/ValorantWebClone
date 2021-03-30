@@ -1,0 +1,10 @@
+.navbar {
+    background-color: white;
+
+    .nav-link {
+        font-family: $font-family;
+        color: $color-bg;
+        @include font-head();
+        margin: $my-margin; 
+    }
+}
